@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Title of the page displayed in the browser tab -->
+    <title>⛅Weather App by Aayush Raj⛅</title>
+
+    <!-- Bootstrap CSS (for styling and responsive layout) -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Weather Icons CSS (for using weather-related icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
+    <!-- Custom CSS for the weather page (weather.css) -->
+    <link rel="stylesheet" type="text/css" href="/css/weather.css">
+</head>
+<body>
+<!-- Main container for the weather information -->
+<div class="container">
+    <!-- Row with center alignment for the weather card -->
+    <div class="row justify-content-center">
+        <!-- Column with a width of 6/12 for a responsive layout -->
+        <div class="col-md-6">
+            <!-- Card element to display weather information -->
+            <div class="card">
+                <!-- Card body containing the weather details -->
+                <div class="card-body text-center">
+                    <!-- Title showing the city and country -->
+                    <h1 class="card-title">Weather in <span th:text="${city}">City</span>, <span th:text="${country}">Country</span></h1>
+
+                    <!-- Weather icon displayed dynamically based on the weather condition -->
+                    <span th:classappend="${weatherIcon} + ' weather-icon'"></span>
+
+                    <!-- Weather description -->
+                    <p class="card-text"><strong>Description:</strong> <span th:text="${weatherDescription}">Description</span></p>
+
+                    <!-- Temperature in Celsius -->
+                    <p class="card-text"><strong>Temperature:</strong> <span th:text="${temperature}">Temperature</span>°C</p>
+
+                    <!-- Humidity percentage -->
+                    <p class="card-text"><strong>Humidity:</strong> <span th:text="${humidity}">Humidity</span>%</p>
+
+                    <!-- Wind speed in meters per second -->
+                    <p class="card-text"><strong>Wind Speed:</strong> <span th:text="${windSpeed}">Wind Speed</span> m/s</p>
+
+                    <!-- Button to navigate back to the main page -->
+                    <a href="/" class="btn btn-secondary btn-block">Back</a>
+
+                    <!-- Error message if the city is not found -->
+                    <div th:if="${error}" class="alert alert-danger mt-3">
+                        <p>Error: <span th:text="${error}"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (for interactivity and responsive features) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

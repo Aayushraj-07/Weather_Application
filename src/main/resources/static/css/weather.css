@@ -1,0 +1,45 @@
+/* Body styling */
+body {
+    /* Applies a gradient overlay with custom colors and a background image that is fixed, centered, and covers the screen */
+    background: linear-gradient(rgba(0.5, 2.4, 1.2, 0.8), rgba(255, 255, 255, 0.5)), url('/images/image.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire body */
+    color: white; /* Sets text color to white */
+    font-family: 'Arial', sans-serif; /* Sets the font for the page */
+}
+
+/* Container styling */
+.container {
+    margin-top: 100px; /* Adds space from the top */
+}
+
+/* Card styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box-shadow on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increases the shadow on hover */
+}
+
+/* Weather icon styling */
+.weather-icon {
+    font-size: 100px; /* Sets the size of the weather icon */
+    color: #ffd700; /* Sets the icon color to gold */
+    padding-bottom: 10px; /* Adds space below the icon */
+}
+
+/* Card text styling */
+.card-text {
+    font-size: 1.2em; /* Increases the font size for text inside the card */
+    transition: color 0.3s; /* Smooth transition for text color on hover */
+}
+
+/* Card text hover effect */
+.card-text:hover {
+    color: #ffd700; /* Changes text color to gold on hover */
+}

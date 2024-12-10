@@ -1,0 +1,54 @@
+/* Body styling */
+body {
+    /* Applies a dark gradient overlay and a background image that is fixed, centered, and covers the screen */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/image.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire body */
+    color: white; /* Sets text color to white */
+    font-family: 'Arial', sans-serif; /* Sets the font for the page */
+}
+
+/* Container styling */
+.container {
+    margin-top: 100px; /* Adds space from the top */
+}
+
+/* Card styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box-shadow on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increases the shadow on hover */
+}
+
+/* Form control styling */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.7); /* Light transparent background */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background-color on focus */
+}
+
+/* Form control focus effect */
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly darker background on focus */
+}
+
+/* Primary button styling */
+.btn-primary {
+    background-color: #007bff; /* Blue background */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
